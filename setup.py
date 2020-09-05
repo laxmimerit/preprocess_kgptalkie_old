@@ -6,6 +6,7 @@ with open('README.md', 'r') as file:
 
 setuptools.setup(
 	name = 'preprocess_kgptalkie', #this should be unique
+	include_package_data=True,
 	version = '0.0.6',
 	author = 'Laxmi Kant',
 	author_email = 'udemy@kgptalkie.com',
