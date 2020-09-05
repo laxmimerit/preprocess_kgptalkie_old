@@ -137,14 +137,15 @@ def _spelling_correction(x):
 
 def _get_basic_features(df):
 	if type(df) == pd.core.frame.DataFrame:
-        df['char_counts'] = df['text'].apply(lambda x: _get_charcounts(x))
-        df['word_counts'] = df['text'].apply(lambda x: _get_wordcounts(x))
-        df['avg_wordlength'] = df['text'].apply(lambda x: _get_avg_wordlength(x))
-        df['stopwords_counts'] = df['text'].apply(lambda x: _get_stopwords_counts(x))
-        df['hashtag_counts'] = df['text'].apply(lambda x: _get_hashtag_counts(x))
-        df['mentions_counts'] = df['text'].apply(lambda x: _get_mentions_counts(x))
-        df['digits_counts'] = df['text'].apply(lambda x: _get_digit_counts(x))
-        df['uppercase_counts'] = df['text'].apply(lambda x: _get_uppercase_counts(x))
-    else:
-        print('ERROR: This function takes only Pandas DataFrame')
-    return df
+		df['char_counts'] = df['text'].apply(lambda x: _get_charcounts(x))
+		df['word_counts'] = df['text'].apply(lambda x: _get_wordcounts(x))
+		df['avg_wordlength'] = df['text'].apply(lambda x: _get_avg_wordlength(x))
+		df['stopwords_counts'] = df['text'].apply(lambda x: _get_stopwords_counts(x))
+		df['hashtag_counts'] = df['text'].apply(lambda x: _get_hashtag_counts(x))
+		df['mentions_counts'] = df['text'].apply(lambda x: _get_mentions_counts(x))
+		df['digits_counts'] = df['text'].apply(lambda x: _get_digit_counts(x))
+		df['uppercase_counts'] = df['text'].apply(lambda x: _get_uppercase_counts(x))
+	else:
+		print('ERROR: This function takes only Pandas DataFrame')
+		
+	return df
