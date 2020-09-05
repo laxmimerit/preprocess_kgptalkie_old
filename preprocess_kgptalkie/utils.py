@@ -12,6 +12,8 @@ import unicodedata
 from textblob import TextBlob
 import en_core_web_sm
 
+from sklearn.feature_extraction.text import CountVectorizer
+
 nlp = en_core_web_sm.load()
 
 path = os.path.dirname(os.path.abspath(__file__))
@@ -150,3 +152,14 @@ def _get_basic_features(df):
 		print('ERROR: This function takes only Pandas DataFrame')
 		
 	return df
+
+
+def _get_ngram(df, col, ngram_range):
+	vectorizer = CountVectorizer(ngram_range=(ngram_range, ngram_range))
+	vectorizer.fit_transform(tweet[col])
+	ngram = vectorizer.vocabulary_
+	ngram = sorted(ngram.items(), key = lambda x: x[1], reverse=True)
+
+	return ngram
+
+
