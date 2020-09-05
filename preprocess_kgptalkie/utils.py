@@ -44,7 +44,8 @@ def _get_mentions_counts(x):
 	return l
 
 def _get_digit_counts(x):
-	return len([t for t in x.split() if t.isdigit()])
+	digits = re.findall(r'[0-9,.]+', x)
+	return len(digits)
 
 def _get_uppercase_counts(x):
 	return len([t for t in x.split() if t.isupper()])
