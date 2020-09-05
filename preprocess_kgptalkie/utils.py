@@ -14,6 +14,10 @@ import en_core_web_sm
 
 nlp = en_core_web_sm.load()
 
+path = os.path.dirname(os.path.abspath(__file__))
+abbreviations_path = os.path.join(path, 'data','abbreviations_wordlist.json')
+
+
 def _get_wordcounts(x):
 	length = len(str(x).split())
 	return length
@@ -46,7 +50,7 @@ def _get_uppercase_counts(x):
 	return len([t for t in x.split() if t.isupper()])
 
 def _cont_exp(x):
-	abbreviations = json.load(open('data/abbreviations_wordlist.json'))
+	abbreviations = json.load(open(abbreviations_path))
 
 	if type(x) is str:
 		for key in abbreviations:
