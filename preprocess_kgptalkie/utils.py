@@ -156,7 +156,7 @@ def _get_basic_features(df):
 
 def _get_ngram(df, col, ngram_range):
 	vectorizer = CountVectorizer(ngram_range=(ngram_range, ngram_range))
-	vectorizer.fit_transform(tweet[col])
+	vectorizer.fit_transform(df[col])
 	ngram = vectorizer.vocabulary_
 	ngram = sorted(ngram.items(), key = lambda x: x[1], reverse=True)
 
