@@ -1,6 +1,6 @@
 from preprocess_kgptalkie import utils
 
-__version__ = '0.0.6'
+__version__ = '0.0.7'
 
 def get_wordcounts(x):
 	return utils._get_wordcounts(x)
@@ -53,9 +53,8 @@ def remove_html_tags(x):
 def remove_accented_chars(x):
 	return utils._remove_accented_chars(x)
 
-
 def remove_stopwords(x):
-	return utils.remove_stopwords(x)
+	return utils._remove_stopwords(x)
 
 def make_base(x):
 	return utils._make_base(x)
@@ -71,4 +70,7 @@ def remove_rarewords(x, freq, n=20):
 
 def spelling_correction(x):
 	return utils._spelling_correction(x)
+
+def remove_dups_char(x):
+	return utils._remove_dups_char(x)
 

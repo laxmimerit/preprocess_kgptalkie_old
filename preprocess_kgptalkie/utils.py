@@ -127,6 +127,10 @@ def _remove_rarewords(x, freq, n=20):
 	x = ' '.join([t for t in x.split() if t not in fn])
 	return x
 
+def _remove_dups_char(x):
+	x = re.sub("(.)\\1{2,}", "\\1", x)
+	return x
+
 def _spelling_correction(x):
 	x = TextBlob(x).correct()
 	return x
