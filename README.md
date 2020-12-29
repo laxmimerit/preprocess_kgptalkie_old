@@ -14,7 +14,7 @@ pip install textblob==0.15.3
 
 Install
 
-`pip install git+https://github.com/laxmimerit/preprocess_kgptalkie.git`
+`pip install git+https://github.com/laxmimerit/preprocess_kgptalkie.git --upgrade --force-reinstall`
 
 Uninstall
 
