@@ -59,7 +59,8 @@ def _cont_exp(x):
 		for key in abbreviations:
 			value = abbreviations[key]
 			raw_text = r'\b' + key + r'\b'
-			x = x.replace(raw_text, value)
+			x = re.sub(raw_text, value, x)
+			# print(raw_text,value, x)
 		return x
 	else:
 		return x
