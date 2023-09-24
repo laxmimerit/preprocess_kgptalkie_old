@@ -2,14 +2,14 @@
 
 #### Course Link: https://bit.ly/intro_nlp
 
-This python package is prepared by YourName.
+This Python package is prepared by YourName.
 
 Dependencies
 ```
-pip install spacy==2.2.3
+pip install spacy
 python -m spacy download en_core_web_sm
-pip install beautifulsoup4==4.9.1
-pip install textblob==0.15.3
+pip install beautifulsoup4
+pip install textblob
 ```
 
 Install
@@ -21,7 +21,7 @@ Uninstall
 `pip uninstall preprocess_kgptalkie`
 
 #### How to use it for preprocessing
-You have to have installed spacy and python3 to make it work.
+You have to have installed `spacy` and `python3` to make it work.
 
 ```
 def get_clean(x):
