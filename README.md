@@ -2,7 +2,7 @@
 
 #### Course Link: https://bit.ly/intro_nlp
 
-This Python package is prepared by KGPTalkie[youtube.com/kgptalkie].
+This Python package is prepared by [KGPTalkie](youtube.com/kgptalkie).
 
 Dependencies
 ```
